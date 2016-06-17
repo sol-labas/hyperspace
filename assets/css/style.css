@@ -195,16 +195,105 @@ div.getit {
     line-height: 1.5;
 }
 .name {
-	width: calc(64.66666% - 2em);
+	width: calc(65.66666% - 2em);
 	padding-right: 2em;
 	border-right: solid 1px rgba(255, 255, 255, 0.15);
 	display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
 }
 .address {
 	width: calc(33.33333% - 2em);
 	padding-right: 2em;
 	display: inline-block;
+    box-sizing: border-box;
+}
+form .field.half.first {
+    padding: 0 0.75em 0 0;
+    display: block;
+    box-sizing: border-box;
+}
+form .field.half {
+    width: 50%;
+    float: left;
+    padding: 0 0 0 0.75em;
+    display: block;
+    box-sizing: border-box;
+}
+form .field {
+    margin: 0 0 1em 0;
+    display: block;
+    box-sizing: border-box;
+}
+label {
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.7em 0;
+    display: block;
+    font-size: 1.1em;
+}
+input[type="text"], input[type="password"], input[type="email"], select {
+    -webkit-appearance: none;
+    height: 2.75em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.25em;
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    color: inherit;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    width: 100%;
+}
+textarea {
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    border-radius: 0.25em;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16.5pt;
+    min-height: 10em;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.address {
+    margin: 0 0 2em 0;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.address h3 {
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.5em 0;
+}
+a.list-group-item {
+    padding-left: 0;
+    margin: 0 1em 0 0;
+    color: #B6A9D7;
 }
 div.copyrigt {
 	background-color: #493382;
+    padding: 4em 4em 2em 4em;
+}
+.copyrigt p {
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.8em;
+    margin: 0 0 2em 0;
+}
+.copyrigt p a {
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.15);
 }
