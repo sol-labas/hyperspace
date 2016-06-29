@@ -1,12 +1,44 @@
+@-ms-viewport {
+    width: device-width;
+}
 body {
 	box-sizing: border-box;
 	font-family: Arial, Tahoma, Verdana, sans-serif;
 	color: #B6A9D7;
 	list-style-type: none;
+    -ms-overflow-style: scrollbar;
 }
-
+@media screen and (max-width: 1680px) {
+    body, input, select, textarea {
+        font-size: 13pt;
+    }
+}
+@media screen and (max-width: 1280px) {
+    body, input, select, textarea {
+        font-size: 12pt;
+    }
+}
+@media screen and (max-width: 736px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+}
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+}
+@media screen and (max-width: 360px) {
+    body, input, select, textarea {
+        font-size: 11pt;
+    }
+}
 a {
 	text-decoration: none;
+    color: #B6A9D7;
 }
 a:hover,
 .insidehyper p a:hover,
@@ -39,7 +71,7 @@ a.button {
 a.button:hover {
     border-color: rgba(255, 255, 255, 0.55) !important;
 }
-.button:after {
+.button::after {
     -moz-transform: scale(0.25);
     -webkit-transform: scale(0.25);
     -ms-transform: scale(0.25);
@@ -62,29 +94,19 @@ a.button:hover {
     top: 0;
     width: 100%;
 }
-.button:after {
-            -moz-transform: scale(0.25);
-            -webkit-transform: scale(0.25);
-            -ms-transform: scale(0.25);
-            transform: scale(0.25);
-            -moz-pointer-events: none;
-            -webkit-pointer-events: none;
-            -ms-pointer-events: none;
-            pointer-events: none;
-            -moz-transition: opacity 0.2s ease, -moz-transform 0.2s ease;
-            -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
-            -ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-            background: #ffffff;
-            border-radius: 3em;
-            content: '';
-            height: 100%;
-            left: 0;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
+.button:hover:after {
+    opacity: 0.05;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.button:hover:active {
+    border-color: #ffffff !important;
+}
+.button:hover:active:after {
+    opacity: 0.1;
+}
 .actions li, .nav li {
 	list-style-type: none;
 }
@@ -148,9 +170,9 @@ div.hyper {
 	background-image: url("images/intro.svg");
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
 	text-decoration: none;
-	min-height: calc(100vh - 2.5em);
+	min-height: calc(100vh);
 }
 .insidehyper {
 	padding: 4em 4em 2em 4em;
