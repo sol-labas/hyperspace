@@ -460,7 +460,14 @@ div.copyrigt {
         transform: translateY(1em);
     }
 }
+@media screen and (max-width: 950px) {
+    body, input, select, textarea {
+        font-size: 11pt;
+    }
+}
+
 @media screen and (max-width: 736px) {
+
     h1 {
         font-size: 2em;
     }
@@ -490,8 +497,11 @@ div.copyrigt {
     }
 }
 @media screen and (max-width: 480px) {
-    html, body {
+/*    html, body {
         min-width: 320px;
+    }*/
+            body, input, select, textarea {
+        font-size: 11pt;
     }
     .features section {
         padding: 2em 1.5em 0.1em 1.5em ;
@@ -507,6 +517,9 @@ div.copyrigt {
         line-height: inherit;
         margin: 0.5em 0 0 0;
         padding-left: 0;
+    }
+    .nav {
+        display: none;
     }
 }
 @media screen and (max-width: 360px) {
